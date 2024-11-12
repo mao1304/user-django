@@ -121,7 +121,7 @@ def login_admin(request):
     administrador, error = authenticate_user(Administrador, "usuario", usuario, password)
     
     if administrador:
-        return Response({"detail": "Login exitoso", "usuario": administrador.usuario}, status=status.HTTP_200_OK)
+        return Response({"detail": "Login con exitoso", "usuario": administrador.usuario}, status=status.HTTP_200_OK)
     else:
         return Response({"detail": error}, status=status.HTTP_401_UNAUTHORIZED)
 
